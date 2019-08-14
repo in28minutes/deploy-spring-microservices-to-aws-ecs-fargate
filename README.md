@@ -8,13 +8,13 @@ How about learning AWS by deploying Spring Boot Docker Containers to Cloud using
 
 ## Containers
 
-- Hello World - in28min/aws-hello-world-rest-api:1.0.0-RELEASE
-- Simple Task - in28min/aws-simple-spring-task:1.0.0-RELEASE
-- Currency Exchange Microservice - H2 - in28min/aws-currency-exchange-service-h2:0.0.1-SNAPSHOT
-- Currency Exchange Microservice - MySQL - in28min/aws-currency-exchange-service-mysql:0.0.1-SNAPSHOT
-- Currency Conversion Microservice - in28min/aws-currency-conversion-service:0.0.1-SNAPSHOT
-- Currency Exchange Microservice - X Ray - in28min/aws-currency-exchange-service-h2-xray:0.0.1-SNAPSHOT
-- Currency Conversion Microservice - X Ray -  in28min/aws-currency-conversion-service-xray:0.0.1-SNAPSHOT
+- Hello World - `in28min/aws-hello-world-rest-api:1.0.0-RELEASE`
+- Simple Task - `in28min/aws-simple-spring-task:1.0.0-RELEASE`
+- Currency Exchange Microservice - H2 - `in28min/aws-currency-exchange-service-h2:0.0.1-SNAPSHOT`
+- Currency Exchange Microservice - MySQL - `in28min/aws-currency-exchange-service-mysql:0.0.1-SNAPSHOT`
+- Currency Conversion Microservice - `in28min/aws-currency-conversion-service:0.0.1-SNAPSHOT`
+- Currency Exchange Microservice - X Ray - `in28min/aws-currency-exchange-service-h2-xray:0.0.1-SNAPSHOT`
+- Currency Conversion Microservice - X Ray -  `in28min/aws-currency-conversion-service-xray:0.0.1-SNAPSHOT`
 
 
 ## Getting Started
