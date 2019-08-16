@@ -19,9 +19,9 @@ How about learning AWS by deploying Spring Boot Docker Containers to Cloud using
 
 ## Getting Started
 - [Video - Docker in 5 Steps](https://youtu.be/Rt5G5Gj7RP0)
-- [Video - Spring in Steps](https://www.youtube.com/watch?v=edgZo2g-LTM)
-- [Video - Spring Boot in Steps](https://www.youtube.com/watch?v=pcdpk3Yd1EA)
-- [Video - JPA/Hibernate in Steps](https://www.youtube.com/watch?v=MaI0_XdpdP8)
+- [Video - Spring in 10 Steps](https://www.youtube.com/watch?v=edgZo2g-LTM)
+- [Video - Spring Boot in 10 Steps](https://www.youtube.com/watch?v=pcdpk3Yd1EA)
+- [Video - JPA/Hibernate in 10 Steps](https://www.youtube.com/watch?v=MaI0_XdpdP8)
 - [AWS Code Pipeline Github Repo](https://github.com/in28minutes/spring-boot-todo-rest-api-h2-aws-codepipeline)
 
 ## Installation Guides
@@ -233,6 +233,22 @@ for file in *; do mv "${file}" "${file//01 Step/Step}"; done
 - Courtesy http://viz-js.com/
 
 ```
+digraph architecture {
+  rankdir=TB;
+{rank=same; CurrencyConversionService, CurrencyExchangeService};
+Database[shape=cylinder]
+CurrencyConversionService, CurrencyExchangeService[shape=component]
+
+  CurrencyConversionService -> CurrencyExchangeService;
+  
+  CurrencyExchangeService->Database;
+  
+  CurrencyConversionService[label=<Currency Conversion Service <BR /><BR /><FONT POINT-SIZE="8">10 USD = 600 INR<BR /><BR /><BR /></FONT>>];
+  CurrencyExchangeService[label=<Currency Exchange Service <BR /><BR /><FONT POINT-SIZE="8">1 USD = 60 INR<BR />1 EUR = 70 INR<BR/>1 AUD = 50 INR</FONT>>];
+
+}
+
+
 graph architecture {
 
 node[style=filled,color="#59C8DE"]
@@ -254,7 +270,6 @@ SecretAccessKey[label=<Secret Access Key>]
 Console[label=<Management Console>]
 Application[label=<APIs>]
 }
-
 
 graph architecture {
 
