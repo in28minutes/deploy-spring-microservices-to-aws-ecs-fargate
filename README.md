@@ -16,13 +16,29 @@ How about learning AWS by deploying Spring Boot Docker Containers to Cloud using
 - Currency Exchange Microservice - X Ray - `in28min/aws-currency-exchange-service-h2-xray:0.0.1-SNAPSHOT`
 - Currency Conversion Microservice - X Ray -  `in28min/aws-currency-conversion-service-xray:0.0.1-SNAPSHOT`
 
+amazon/aws-xray-daemon:1
+
+http://54.174.192.231:8000/api/currency-exchange-microservice/currency-exchange/from/EUR/to/INR
+
+http://3.91.50.212:8100/api/currency-conversion-microservice/currency-converter/from/USD/to/INR/quantity/10
+
+http://54.174.192.231:8000/api/currency-exchange-microservice/manage/health
+http://3.91.50.212:8100/api/currency-conversion-microservice/manage/health
+
+
+
 ## Enviroment Variables
-- CURRENCY_EXCHANGE_URI
-- RDS_HOSTNAME
-- RDS_PORT
-- RDS_DB_NAME
-- RDS_USERNAME
-- RDS_PASSWORD
+
+SSM URN - arn:aws:ssm:us-east-1:<account-id>:parameter/<name>
+
+- /dev/currency-conversion-service/CURRENCY_EXCHANGE_URI
+
+- /dev/currency-exchange-service/RDS_DB_NAME  - exchange_db
+- /dev/currency-exchange-service/RDS_HOSTNAME 
+- /dev/currency-exchange-service/RDS_PASSWORD 
+- /dev/currency-exchange-service/RDS_PORT     - 3306
+- /dev/currency-exchange-service/RDS_USERNAME - exchange_db_user
+
 
 ## Getting Started
 - [Video - Docker in 5 Steps](https://youtu.be/Rt5G5Gj7RP0)
