@@ -29,7 +29,7 @@ http://3.91.50.212:8100/api/currency-conversion-microservice/manage/health
 
 ## Enviroment Variables
 
-SSM URN - arn:aws:ssm:us-east-1:<account-id>:parameter/<name>
+SSM URN - `arn:aws:ssm:us-east-1:<account-id>:parameter/<name>`
 
 - /dev/currency-conversion-service/CURRENCY_EXCHANGE_URI
 
