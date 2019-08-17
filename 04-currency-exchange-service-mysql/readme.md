@@ -109,15 +109,6 @@ Fetching table and column names from `todos` for auto-completion... Press ^C to 
 
 ```
 
-### Create Todo Table for Production
-
-```
-create table hibernate_sequence (next_val bigint) engine=InnoDB
-insert into hibernate_sequence values ( 1 )
-create table todo (id integer not null, description varchar(255), is_done bit not null, target_date datetime(6), user varchar(255), primary key (id)) engine=InnoDB
-
-```
-
 ## Containerization
 
 ### Troubleshooting
@@ -139,6 +130,18 @@ Test API
 docker login
 docker push @@@REPO_NAME@@@/aws-currency-exchange-service-mysql:0.0.1-SNAPSHOT
 ```
+
+## Environment Variables
+
+SSM URN - arn:aws:ssm:us-east-1:<account-id>:parameter/<name>
+
+- /dev/currency-exchange-service/RDS_DB_NAME  - exchange_db
+- /dev/currency-exchange-service/RDS_HOSTNAME	
+- /dev/currency-exchange-service/RDS_PASSWORD	
+- /dev/currency-exchange-service/RDS_PORT     - 3306
+- /dev/currency-exchange-service/RDS_USERNAME - exchange_db_user
+
+
 
 ## Resources
 

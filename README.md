@@ -10,12 +10,19 @@ How about learning AWS by deploying Spring Boot Docker Containers to Cloud using
 
 - Hello World - `in28min/aws-hello-world-rest-api:1.0.0-RELEASE`
 - Simple Task - `in28min/aws-simple-spring-task:1.0.0-RELEASE`
-- Currency Exchange Microservice - H2 - `in28min/aws-currency-exchange-service-h2:0.0.1-SNAPSHOT`
+- Currency Exchange Microservice - H2 - `in28min/aws-currency-exchange-service-h2:0.0.1-SNAPSHOT` - 8000
 - Currency Exchange Microservice - MySQL - `in28min/aws-currency-exchange-service-mysql:0.0.1-SNAPSHOT`
-- Currency Conversion Microservice - `in28min/aws-currency-conversion-service:0.0.1-SNAPSHOT`
+- Currency Conversion Microservice - `in28min/aws-currency-conversion-service:0.0.1-SNAPSHOT` - 8100
 - Currency Exchange Microservice - X Ray - `in28min/aws-currency-exchange-service-h2-xray:0.0.1-SNAPSHOT`
 - Currency Conversion Microservice - X Ray -  `in28min/aws-currency-conversion-service-xray:0.0.1-SNAPSHOT`
 
+## Enviroment Variables
+- CURRENCY_EXCHANGE_URI
+- RDS_HOSTNAME
+- RDS_PORT
+- RDS_DB_NAME
+- RDS_USERNAME
+- RDS_PASSWORD
 
 ## Getting Started
 - [Video - Docker in 5 Steps](https://youtu.be/Rt5G5Gj7RP0)
@@ -248,6 +255,34 @@ CurrencyConversionService, CurrencyExchangeService[shape=component]
 
 }
 
+graph architecture {
+
+node[style=filled,color="#59C8DE"]
+//node [style=filled,color="#D14D28", fontcolor=white];
+rankdir = TB
+
+node[shape=record, width=0.5]
+LoadBalancer[width=5,label=<Load Balancer>,color="#D14D28", fontcolor=white]
+Listener1[width=3,label=<Listener <BR />>]
+Listener2[width=3,label=<Listener ..>]
+TG1,TG2[width=2.5,label=<Target Group <BR />>]
+Rule1[width=2.75,label=<Rule<BR /><FONT POINT-SIZE="11">/api/currency-conversion-microservice</FONT>>]
+Rule2[width=2.75,label=<Rule<BR /><FONT POINT-SIZE="11">/api/currency-exchange-microservice</FONT>>]
+CCS1,CCS2,CCS3[label=<Conversion <BR/>Service>]
+CES1,CES2[label=<Exchange <BR/>Service>]
+LoadBalancer -- Listener1
+LoadBalancer -- Listener2
+Listener1 -- Rule1
+Listener1 -- Rule2
+Rule1 -- TG1
+Rule2 -- TG2
+TG1 -- CCS1
+TG1 -- CCS2
+TG1 -- CCS3
+TG2 -- CES1
+TG2 -- CES2
+
+}
 
 graph architecture {
 

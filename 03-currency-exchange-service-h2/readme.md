@@ -11,10 +11,20 @@ Run com.in28minutes.microservices.currencyconversionservice.CurrencyConversionSe
 - Problem - Error creating the Docker image on MacOS - java.io.IOException: Cannot run program “docker-credential-osxkeychain”: error=2, No such file or directory
 - Solution - https://medium.com/@dakshika/error-creating-the-docker-image-on-macos-wso2-enterprise-integrator-tooling-dfb5b537b44e
 
-### Creating Containers
+### Creating Container
 
 - mvn package
-- docker run --publish 8000:8000 --network MY_BRIDGE --name currency-exchange-microservice in28min/aws-currency-exchange-service-h2:0.0.1-SNAPSHOT
+
+### Running Container
+
+#### Basic
+```
+docker container run --publish 8000:8000 in28min/aws-currency-exchange-service-h2:0.0.1-SNAPSHOT
+```
+#### Custom Network
+```
+docker run --publish 8000:8000 --network currency-network --name=currency-exchange-service in28min/aws-currency-exchange-service-h2:0.0.1-SNAPSHOT
+```
 
 Test API 
 - http://localhost:8000/api/currency-exchange-microservice/currency-exchange/from/USD/to/INR
@@ -40,7 +50,7 @@ docker push @@@REPO_NAME@@@/aws-currency-exchange-service-h2:0.0.1-SNAPSHOT
 
 ## H2 Console
 
-- http://localhost:8000/h2-console
+- http://localhost:8000/api/currency-exchange-microservice
 - Use `jdbc:h2:mem:testdb` as JDBC URL
 
 

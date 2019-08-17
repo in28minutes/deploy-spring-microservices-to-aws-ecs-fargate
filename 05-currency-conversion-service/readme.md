@@ -14,12 +14,15 @@ Run com.in28minutes.microservices.currencyconversionservice.CurrencyConversionSe
 ### Creating Containers
 
 - mvn package
-- docker run --publish 8100:8100 --network MY_BRIDGE --env CURRENCY_EXCHANGE_URI=http://currency-exchange-microservice:8000 in28min/aws-currency-conversion-service:0.0.1-SNAPSHOT
 
-Test API 
-- http://localhost:8100/api/currency-conversion-microservice/currency-converter/from/USD/to/INR/quantity/1000
-- http://localhost:8100/api/currency-conversion-microservice/currency-converter-feign/from/USD/to/INR/quantity/10000
+### Running Containers
 
+```
+docker run --publish 8100:8100 --network currency-network --env CURRENCY_EXCHANGE_URI=http://currency-exchange-service:8000 in28min/aws-currency-conversion-service:0.0.1-SNAPSHOT
+```
+
+#### Test API 
+- http://localhost:8100/api/currency-conversion-microservice/currency-converter/from/EUR/to/INR/quantity/10
 ```
 docker login
 docker push @@@REPO_NAME@@@/aws-currency-conversion-service:0.0.1-SNAPSHOT
@@ -28,16 +31,17 @@ docker push @@@REPO_NAME@@@/aws-currency-conversion-service:0.0.1-SNAPSHOT
 
 ## Resources
 
-- http://localhost:8100/api/currency-conversion-microservice/currency-converter-feign/from/USD/to/INR/quantity/10000
+- http://localhost:8100/api/currency-conversion-microservice/currency-converter/from/EUR/to/INR/quantity/10
 
 ```json
 {
-  "id": 10001,
-  "from": "USD",
-  "to": "INR",
-  "conversionMultiple": 65.00,
-  "quantity": 1000,
-  "totalCalculatedAmount": 65000.00,
-  "environmentInfo": "NA"
+id: 10002,
+from: "EUR",
+to: "INR",
+conversionMultiple: 75,
+quantity: 10,
+totalCalculatedAmount: 750,
+exchangeEnvironmentInfo: "NA",
+conversionEnvironmentInfo: "NA",
 }
 ```

@@ -16,6 +16,10 @@ Run com.in28minutes.microservices.currencyconversionservice.CurrencyConversionSe
 public class CurrencyExchangeController {
 ```
 
+## XRay Daemon
+
+- amazon/aws-xray-daemon:1
+
 
 ## Containerization
 
