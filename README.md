@@ -6,6 +6,14 @@ Spring Boot is the No 1 Java Framework to develop REST API and Microservices. AW
 
 How about learning AWS by deploying Spring Boot Docker Containers to Cloud using ECS Fargate?
 
+## Getting Started
+
+- [Video - Docker in 5 Steps](https://youtu.be/Rt5G5Gj7RP0)
+- [Video - Spring in 10 Steps](https://www.youtube.com/watch?v=edgZo2g-LTM)
+- [Video - Spring Boot in 10 Steps](https://www.youtube.com/watch?v=pcdpk3Yd1EA)
+- [Video - JPA/Hibernate in 10 Steps](https://www.youtube.com/watch?v=MaI0_XdpdP8)
+- [AWS Code Pipeline Github Repo](https://github.com/in28minutes/hello-world-rest-api-aws-ecs-codepipeline)
+
 ## Container Images
 
 |     Application                 |    Container                                  |
@@ -57,14 +65,6 @@ SSM URN - `arn:aws:ssm:us-east-1:<account-id>:parameter/<name>`
 - /dev/currency-exchange-service/RDS_PASSWORD 
 - /dev/currency-exchange-service/RDS_PORT     - 3306
 - /dev/currency-exchange-service/RDS_USERNAME - exchange_db_user
-
-## Getting Started
-
-- [Video - Docker in 5 Steps](https://youtu.be/Rt5G5Gj7RP0)
-- [Video - Spring in 10 Steps](https://www.youtube.com/watch?v=edgZo2g-LTM)
-- [Video - Spring Boot in 10 Steps](https://www.youtube.com/watch?v=pcdpk3Yd1EA)
-- [Video - JPA/Hibernate in 10 Steps](https://www.youtube.com/watch?v=MaI0_XdpdP8)
-- [AWS Code Pipeline Github Repo](https://github.com/in28minutes/hello-world-rest-api-aws-ecs-codepipeline)
 
 ## Installation Guides
 
@@ -445,7 +445,7 @@ HostOS -- CloudInfrastructure [style=invis]
 ## Todo
 - Course Creation
   - Exercise - Hello World and First Task Projects
-
+  - Container Images - Prebuilt
 - Post Course Creation
   - Course Promotion Emails/Posts
     - 1 Emails on Udemy
