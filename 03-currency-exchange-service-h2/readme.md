@@ -50,7 +50,7 @@ docker push @@@REPO_NAME@@@/aws-currency-exchange-service-h2:0.0.1-SNAPSHOT
 
 ## H2 Console
 
-- http://localhost:8000/api/currency-exchange-microservice
+- http://localhost:8000/api/currency-exchange-microservice/h2-console
 - Use `jdbc:h2:mem:testdb` as JDBC URL
 
 

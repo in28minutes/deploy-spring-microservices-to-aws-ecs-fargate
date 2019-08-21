@@ -6,46 +6,65 @@ Spring Boot is the No 1 Java Framework to develop REST API and Microservices. AW
 
 How about learning AWS by deploying Spring Boot Docker Containers to Cloud using ECS Fargate?
 
-## Containers
+## Container Images
 
-- Hello World - `in28min/aws-hello-world-rest-api:1.0.0-RELEASE`
-- Simple Task - `in28min/aws-simple-spring-task:1.0.0-RELEASE`
-- Currency Exchange Microservice - H2 - `in28min/aws-currency-exchange-service-h2:0.0.1-SNAPSHOT` - 8000
-- Currency Exchange Microservice - MySQL - `in28min/aws-currency-exchange-service-mysql:0.0.1-SNAPSHOT`
-- Currency Conversion Microservice - `in28min/aws-currency-conversion-service:0.0.1-SNAPSHOT` - 8100
-- Currency Exchange Microservice - X Ray - `in28min/aws-currency-exchange-service-h2-xray:0.0.1-SNAPSHOT`
-- Currency Conversion Microservice - X Ray -  `in28min/aws-currency-conversion-service-xray:0.0.1-SNAPSHOT`
+|     Application                 |    Container                                  |
+| ------------------------------- | --------------------------------------------- |
+| Hello World | in28min/aws-hello-world-rest-api:1.0.0-RELEASE |
+| Simple Task | in28min/aws-simple-spring-task:1.0.0-RELEASE |
+| CurrencyExchangeMicroservice-H2 | in28min/aws-currency-exchange-service-h2:0.0.1-SNAPSHOT |
+| CurrencyExchangeMicroservice-H2 - V2 | in28min/aws-currency-exchange-service-h2:1.0.1-RELEASE|
+| CurrencyExchangeMicroSevice-MySQL| in28min/aws-currency-exchange-service-mysql:0.0.1-SNAPSHOT|
+| CurrencyConversionMicroservice | in28min/aws-currency-conversion-service:0.0.1-SNAPSHOT |
+| Currency Exchange - X Ray | in28min/aws-currency-exchange-service-h2-xray:0.0.1-SNAPSHOT|
+| Currency Conversion - X Ray | in28min/aws-currency-conversion-service-xray:0.0.1-SNAPSHOT|
 
-amazon/aws-xray-daemon:1
+|     Utility       |     Container Image        |
+| ------------- | ------------------------- |
+| aws-xray-daemon| amazon/aws-xray-daemon:1|
 
-http://54.174.192.231:8000/api/currency-exchange-microservice/currency-exchange/from/EUR/to/INR
+## Microservice URLs and Details
 
-http://3.91.50.212:8100/api/currency-conversion-microservice/currency-converter/from/USD/to/INR/quantity/10
+### Currency Exchange Service
 
-http://54.174.192.231:8000/api/currency-exchange-microservice/manage/health
-http://3.91.50.212:8100/api/currency-conversion-microservice/manage/health
+- PORT - 8000
+- URL - `http://localhost:8000/api/currency-exchange-microservice/currency-exchange/from/EUR/to/INR`
+- HEALTH URL - `http://localhost:8000/api/currency-exchange-microservice/manage/health`
+- Enviroment Variables
+  - SSM URN - `arn:aws:ssm:us-east-1:<account-id>:parameter/<name>`
+  - /dev/currency-exchange-service/RDS_DB_NAME  - exchange_db
+  - /dev/currency-exchange-service/RDS_HOSTNAME 
+  - /dev/currency-exchange-service/RDS_PASSWORD 
+  - /dev/currency-exchange-service/RDS_PORT     - 3306
+  - /dev/currency-exchange-service/RDS_USERNAME - exchange_db_user
 
+### Currency Conversion Service
 
+- PORT - 8100
+- URL - `http://localhost:8100/api/currency-conversion-microservice/currency-converter/from/USD/to/INR/quantity/10`
+- HEALTH URL - `http://localhost:8100/api/currency-conversion-microservice/manage/health`
+- Enviroment Variables
+  - SSM URN - `arn:aws:ssm:us-east-1:<account-id>:parameter/<name>`
+  - /dev/currency-conversion-service/CURRENCY_EXCHANGE_URI
 
 ## Enviroment Variables
 
 SSM URN - `arn:aws:ssm:us-east-1:<account-id>:parameter/<name>`
 
 - /dev/currency-conversion-service/CURRENCY_EXCHANGE_URI
-
 - /dev/currency-exchange-service/RDS_DB_NAME  - exchange_db
 - /dev/currency-exchange-service/RDS_HOSTNAME 
 - /dev/currency-exchange-service/RDS_PASSWORD 
 - /dev/currency-exchange-service/RDS_PORT     - 3306
 - /dev/currency-exchange-service/RDS_USERNAME - exchange_db_user
 
-
 ## Getting Started
+
 - [Video - Docker in 5 Steps](https://youtu.be/Rt5G5Gj7RP0)
 - [Video - Spring in 10 Steps](https://www.youtube.com/watch?v=edgZo2g-LTM)
 - [Video - Spring Boot in 10 Steps](https://www.youtube.com/watch?v=pcdpk3Yd1EA)
 - [Video - JPA/Hibernate in 10 Steps](https://www.youtube.com/watch?v=MaI0_XdpdP8)
-- [AWS Code Pipeline Github Repo](https://github.com/in28minutes/spring-boot-todo-rest-api-h2-aws-codepipeline)
+- [AWS Code Pipeline Github Repo](https://github.com/in28minutes/hello-world-rest-api-aws-ecs-codepipeline)
 
 ## Installation Guides
 
@@ -424,6 +443,9 @@ HostOS -- CloudInfrastructure [style=invis]
 ```
 
 ## Todo
+- Course Creation
+  - Exercise - Hello World and First Task Projects
+
 - Post Course Creation
   - Course Promotion Emails/Posts
     - 1 Emails on Udemy
