@@ -6,7 +6,7 @@
 
 	<groupId>com.in28minutes.microservices</groupId>
 	<artifactId>03-aws-currency-exchange-service-h2</artifactId>
-	<version>1.0.1-RELEASE</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>aws-currency-exchange-service-h2</name>
