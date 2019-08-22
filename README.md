@@ -66,6 +66,57 @@ SSM URN - `arn:aws:ssm:us-east-1:<account-id>:parameter/<name>`
 - /dev/currency-exchange-service/RDS_PORT     - 3306
 - /dev/currency-exchange-service/RDS_USERNAME - exchange_db_user
 
+### Setting up App Mesh
+
+#### Virtual nodes 
+- currency-exchange-service-vn - currency-exchange-service.in28minutes-dev.com
+- currency-conversion-service-vn - currency-conversion-service.in28minutes-dev.com
+
+#### Virtual services 
+- currency-exchange-service.in28minutes-dev.com -> currency-exchange-service-vn
+- currency-conversion-service.in28minutes-dev.com -> currency-conversion-service-vn
+
+#### Backend Registration
+- currency-conversion-service-vn -> currency-exchange-service.in28minutes-dev.com
+
+#### Task Definition Updates
+- aws-currency-conversion-service
+- aws-currency-exchange-service-h2
+- ```ENVOY_LOG_LEVEL-trace, ENABLE_ENVOY_XRAY_TRACING-1```
+
+#### Service Updates
+- aws-currency-conversion-service-appmesh
+- aws-currency-exchange-service-appmesh
+
+### Deploying Version 2 of Currency Exchange Service to ECS and App Mesh
+
+#### App Mesh - New Virtual Node
+currency-exchange-service-v2-vn - currency-exchange-service-v2.in28minutes-dev.com
+
+#### ECS Fargate - Update Task Definition
+aws-currency-exchange-service-h2
+ - in28min/aws-currency-exchange-service-h2:1.0.1-RELEASE
+ - Use New Virtual Node
+ 
+#### ECS Fargate - Create New Service 
+aws-currency-exchange-service-v2-appmesh
+- Service Discovery - currency-exchange-service-v2
+
+#### App Mesh - Create Virtual Router
+currency-exchange-service-vr distributing traffic to
+- currency-exchange-service-vn
+- currency-exchange-service-v2-vn
+
+#### App Mesh - Update Service to Use Virtual Router
+currency-exchange-service.in28minutes-dev.com -> currency-exchange-service-vr
+
+
+#### jq
+
+```
+sudo yum install jq
+```
+
 ## Installation Guides
 
 #### Required Tools
@@ -444,8 +495,14 @@ HostOS -- CloudInfrastructure [style=invis]
 
 ## Todo
 - Course Creation
+  - 3 Videos - Intro, Best Use and Conclusion
+  - Intro to Cloud, AWS, Containers and ECS
+  - Cost Review
   - Exercise - Hello World and First Task Projects
   - Container Images - Prebuilt
+  - EC2 vs Fargate
+  - Clean Up
+
 - Post Course Creation
   - Course Promotion Emails/Posts
     - 1 Emails on Udemy
