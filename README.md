@@ -66,7 +66,7 @@ SSM URN - `arn:aws:ssm:us-east-1:<account-id>:parameter/<name>`
 - /dev/currency-exchange-service/RDS_PORT     - 3306
 - /dev/currency-exchange-service/RDS_USERNAME - exchange_db_user
 
-### Setting up App Mesh
+## Setting up App Mesh
 
 #### Virtual nodes 
 - currency-exchange-service-vn - currency-exchange-service.in28minutes-dev.com
@@ -88,7 +88,7 @@ SSM URN - `arn:aws:ssm:us-east-1:<account-id>:parameter/<name>`
 - aws-currency-conversion-service-appmesh
 - aws-currency-exchange-service-appmesh
 
-### Deploying Version 2 of Currency Exchange Service to ECS and App Mesh
+## Deploying Version 2 of Currency Exchange Service to ECS and App Mesh
 
 #### App Mesh - New Virtual Node
 currency-exchange-service-v2-vn - currency-exchange-service-v2.in28minutes-dev.com
