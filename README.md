@@ -129,6 +129,11 @@ aws servicediscovery list-services
 aws servicediscovery list-namespaces
 aws servicediscovery delete-namespace --id={id}
 aws servicediscovery list-namespaces
+
+aws servicediscovery delete-service --id=srv-7q3fkztnbo6aa5kc
+aws servicediscovery delete-service --id=srv-mdybugm4bh5u4ugx
+aws servicediscovery delete-service --id=srv-7upzjx3mhfleyfoz
+aws servicediscovery delete-namespace --id=ns-ctvtysasurklojm3
 ```
 
 ## Installation Guides
@@ -143,7 +148,6 @@ aws servicediscovery list-namespaces
 #### Installing Guides
 
 - [Playlist - Installing Java, Eclipse & Embedded Maven](https://www.youtube.com/playlist?list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3)
-- [Playlist - Installing Node Js (npm) & Visual Studio Code](https://www.youtube.com/playlist?list=PLBBog2r6uMCQN4X3Aa_jM9qVjgMCHMWx6)
 
 #### Troubleshooting Installations
 - Eclipse and Embedded Maven
@@ -180,6 +184,7 @@ You will be using deploying a variety of projects to Amazon Web Services (AWS). 
 - You have an attitude to learn while having fun :)
 - You have some programming experience with Java, Spring and Spring Boot
 - You have a valid debit or credit card to create a AWS Account
+- AWS Fargate is not in FREE Tier. You are responsible for monitoring the usage of AWS resources to reduce your billing.
 - You DO NOT need to have any experience with AWS (Amazon Web Services)
 
 
@@ -510,9 +515,9 @@ HostOS -- CloudInfrastructure [style=invis]
 ## Todo
 - Course Creation
   - 3 Videos - Intro, Best Use and Conclusion
+
   - Intro to Cloud, AWS, Containers and ECS
   - Cost Review
-  - Clean Up
 
 - Post Course Creation
   - Course Promotion Emails/Posts
