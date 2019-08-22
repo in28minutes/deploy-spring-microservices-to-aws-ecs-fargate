@@ -117,6 +117,20 @@ currency-exchange-service.in28minutes-dev.com -> currency-exchange-service-vr
 sudo yum install jq
 ```
 
+#### AWS CLI Hosted Zones
+
+```
+aws --version
+aws configure
+aws servicediscovery list-services
+aws servicediscovery delete-service --id={id}
+aws servicediscovery list-services
+
+aws servicediscovery list-namespaces
+aws servicediscovery delete-namespace --id={id}
+aws servicediscovery list-namespaces
+```
+
 ## Installation Guides
 
 #### Required Tools
@@ -498,9 +512,6 @@ HostOS -- CloudInfrastructure [style=invis]
   - 3 Videos - Intro, Best Use and Conclusion
   - Intro to Cloud, AWS, Containers and ECS
   - Cost Review
-  - Exercise - Hello World and First Task Projects
-  - Container Images - Prebuilt
-  - EC2 vs Fargate
   - Clean Up
 
 - Post Course Creation
