@@ -399,6 +399,94 @@ for file in *; do mv "${file}" "${file//01 Step/Step}"; done
 - Courtesy http://viz-js.com/
 
 ```
+graph architecture {
+
+node[style=filled,color="#59C8DE"]
+//node [style=filled,color="#D14D28", fontcolor=white];
+rankdir = TB;
+node[shape=record, width=2]
+
+1 -- 2 -- 3 -- 4
+
+1[label=<Cluster>]
+2[label=<Service>]
+3[label=<Task>]
+4[label=<Container>]
+
+}
+
+digraph architecture {
+
+node[style=filled,color="#59C8DE"]
+//node [style=filled,color="#D14D28", fontcolor=white];
+rankdir = TB;
+node[shape=record]
+CO[shape=record, width=6.5, style=filled,color="#D14D28", fontcolor=white]
+CI,CC[shape=record, width=2]
+CL[shape=record, width=6]
+2,3,4[shape=record, width=1.5]
+CI -> CO
+CC -> CO
+CO -> CL
+CL -> 2 
+CL -> 3
+CL -> 4
+
+CI[label=<Container Image(s)>]
+CO[label=<Container Orchestrator>]
+CC[label=<Configuration>]
+CL[label=<Cluster>]
+2[label=<Virtual Server 1>]
+3[label=<Virtual Server 2>]
+4[label=<Virtual Server 3>]
+
+}
+
+digraph architecture {
+
+node[style=filled,color="#36BF80"]
+//node [style=filled,color="#D14D28", fontcolor=white];
+rankdir = TB;
+node[shape=record]
+CO[shape=record, width=6.5, style=filled,color="#D14D28", fontcolor=white]
+CI,CC[shape=record, width=2]
+CL[shape=record, width=6]
+2,3,4[shape=record, width=1.5]
+CI -> CO
+CC -> CO
+CO -> CL
+CL -> 2
+CL -> 3
+CL -> 4
+
+CI[label=<Container Image(s)>]
+CO[label=<ECS>]
+CC[label=<Configuration>]
+CL[label=<Cluster>]
+2[label=<EC2 Instance1>]
+3[label=<EC2 Instance2>]
+4[label=<EC2 Instance3>]
+}
+
+digraph architecture {
+
+node[style=filled,color="#36BF80"]
+//node [style=filled,color="#D14D28", fontcolor=white];
+rankdir = TB;
+node[shape=record]
+CO[shape=record, width=6.5, style=filled,color="#D14D28", fontcolor=white]
+CI,CC[shape=record, width=2]
+CL[shape=record, width=6,color="#59C8DE"]
+CI -> CO
+CC -> CO
+CO -> CL
+
+CI[label=<Container Image(s)>]
+CO[label=<AWS Fargate>]
+CC[label=<Configuration>]
+CL[label=<Cluster>]
+}
+
 digraph architecture {
   rankdir=TB;
 {rank=same; CurrencyConversionService, CurrencyExchangeService};
