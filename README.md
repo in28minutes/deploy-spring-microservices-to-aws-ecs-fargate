@@ -356,7 +356,7 @@ For existing in28Minutes Learners, we are creating a special offer for just $9.9
 
 As always, you receive a full 30-day, unconditional money back guarantee because I know you are going to love our courses!
 
-https://www.udemy.com/deploy-java-spring-boot-to-aws-amazon-web-service/?couponCode=FIRST_PROMO_UDEMY
+https://www.udemy.com/course/deploy-java-spring-boot-to-aws-amazon-web-service/?couponCode=OCTOBER-2019
 
 This course would be a perfect first step as an introduction to AWS and the Cloud.
 
@@ -366,7 +366,7 @@ You will be using a number of AWS Services - EC2, S3, AWS CodePipeLine, AWS Code
 
 You will be using deploying a variety of projects to Amazon Web Services (AWS). These projects are created with  React (Frontend Framework), Spring Boot (REST API Framework), Spring (Dependency Management), Spring Security (Authentication and Authorization - Basic and JWT), BootStrap (Styling Pages), Maven (dependencies management), Node (npm), Visual Studio Code (TypeScript IDE), Eclipse (Java IDE) and Tomcat Embedded Web Server. We will help you set up each one of these.
 
-https://www.udemy.com/deploy-java-spring-boot-to-aws-amazon-web-service/?couponCode=FIRST_PROMO_UDEMY
+https://www.udemy.com/course/deploy-java-spring-boot-to-aws-amazon-web-service/?couponCode=OCTOBER-2019
 
 
 Happy coding and thanks for being a student!
