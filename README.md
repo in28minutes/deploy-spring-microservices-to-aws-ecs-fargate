@@ -1,5 +1,8 @@
 # Deploy Spring Boot and Docker Microservices to AWS using ECS and AWS Fargate
 
+[![Image](https://www.springboottutorial.com/images/Course-Deploy-Java-Spring-Boot-Microservices-To-ECS.png "Deploying Spring Boot Microservices to AWS using ECS and AWS Fargate")](https://www.udemy.com/course/deploy-spring-microservices-to-aws-with-ecs-and-aws-fargate/)
+
+
 ## Learn Amazon Web Services - AWS - deploying Spring Boot and Docker Microservices to AWS Fargate. Implement Service Discovery, Load Balancing, Auto Discovery, Centralized Configuration and Distributed Tracing in AWS.
 
 Spring Boot is the No 1 Java Framework to develop REST API and Microservices. AWS (Amazon Web Services) is the No 1 Cloud Service Provider today.
@@ -333,67 +336,6 @@ You will be using deploying a variety of projects to Amazon Web Services (AWS). 
 - Step 06 - Understanding Code Build Specification - Build Spec
 - Step 07 - Review of AWS Code Pipeline
 
-### Email headings
-  - ⚡⚡⚡ [NEW COURSE] Deploy Spring Boot to Cloud - Amazon Web Services
-  - Is it Your Time... (to start with aws)
-  - By Far, The Easiest Way? ... (to learn cloud)
-  - #1 Skill For Years to Come
-  - Do You have the #1 Skill for a Java Developer?
-  - Do You want to be Future Proof?
-
-### Email Template
-
-```
-Do you have ZERO experience with Amazon Web Services (AWS)? 
-
-Are you ready to learn about the cloud with Amazon Web Services (AWS) and take the next step in your programming career? 
-
-Do you want to learn to Deploy Java Spring Boot Applications to Amazon Web Services (AWS) using AWS Elastic Beanstalk with an easy to learn, step by step approach? 
-
-Do you want to join 300,000+ learners having Amazing Learning Experiences with in28Minutes?
-
-For existing in28Minutes Learners, we are creating a special offer for just $9.99. This is the LOWEST possible price allowable on Udemy. 
-
-As always, you receive a full 30-day, unconditional money back guarantee because I know you are going to love our courses!
-
-https://www.udemy.com/course/deploy-java-spring-boot-to-aws-amazon-web-service/?couponCode=OCTOBER-2019
-
-This course would be a perfect first step as an introduction to AWS and the Cloud.
-
-You will learn about automating deployments with Elastic Beanstalk CLI and creating a continuous delivery pipeline with AWS Code Pipeline. You will learn how to Auto Scale applications based on load as well as deploy multiple instances behind a load balancer using Elastic Beanstalk.
-
-You will be using a number of AWS Services - EC2, S3, AWS CodePipeLine, AWS CodeBuild, SQS, IAM, CloudWatch. 
-
-You will be using deploying a variety of projects to Amazon Web Services (AWS). These projects are created with  React (Frontend Framework), Spring Boot (REST API Framework), Spring (Dependency Management), Spring Security (Authentication and Authorization - Basic and JWT), BootStrap (Styling Pages), Maven (dependencies management), Node (npm), Visual Studio Code (TypeScript IDE), Eclipse (Java IDE) and Tomcat Embedded Web Server. We will help you set up each one of these.
-
-https://www.udemy.com/course/deploy-java-spring-boot-to-aws-amazon-web-service/?couponCode=OCTOBER-2019
-
-
-Happy coding and thanks for being a student!
-
-
-Ranga
-
-Thank you for all the love!
-
-#in28Minutes #ImLearningIn28Minutes #ImLovingIn28Minutes
-
-Good Luck and Keep Learning in28Minutes
-```
-
-```sh
-for file in *; do mv "${file}" "${file//-/ }"; done
-for file in *; do mv "${file}" "${file//   / - }"; done
-for file in *; do mv "${file}" "${file//01 Step/Step}"; done
-```
-
-  
-### Useful Links
-- [Our Website](http://www.in28minutes.com)
-- [Facebook](http://facebook.com/in28minutes)
-- [Twitter](http://twitter.com/in28minutes)
-- [Google Plus](https://plus.google.com/u/3/110861829188024231119)
-
 ## Diagrams
 
 - Courtesy http://viz-js.com/
@@ -654,19 +596,13 @@ HostOS -- CloudInfrastructure [style=invis]
 }
 ```
 
-## Todo
-- Course Creation
-  - Cognito
-- Post Course Creation
-  - Course Promotion Emails/Posts
-    - 1 Emails on Udemy
-    - 1 Emails to Email List
-  - Create YouTube Course Preview Video
-    - Add YouTube Course Preview Video as End Video for all videos
-    - Make it the YouTube Default Video
-  - Release atleast 20 small videos - one a day on Youtube
-  - Do atleast 3 Youtube live sessions
-  - After a Month
-    - UFB and Packt
+### Troubleshooting
+- Refer our TroubleShooting Guide - https://github.com/in28minutes/in28minutes-initiatives/tree/master/The-in28Minutes-TroubleshootingGuide-And-FAQ
 
-## Next Steps
+## Youtube Playlists - 500+ Videos
+
+[Click here - 30+ Playlists with 500+ Videos on Spring, Spring Boot, REST, Microservices and the Cloud](https://www.youtube.com/user/rithustutorials/playlists?view=1&sort=lad&flow=list)
+
+## Keep Learning in28Minutes
+
+in28Minutes is creating amazing solutions for you to learn Spring Boot, Full Stack and the Cloud - Docker, Kubernetes, AWS, React, Angular etc. - [Check out all our courses here](https://github.com/in28minutes/learn)
