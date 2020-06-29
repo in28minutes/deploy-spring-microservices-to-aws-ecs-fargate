@@ -1,8 +1,8 @@
 # Simple Spring Task
 
-Run `com.in28minutes.spring.simple.task.SpringSimpleTaskApplication` as a Java Application.
+Run `SpringSimpleTaskApplication` as a Java Application.
 
-Runs `com.in28minutes.spring.simple.task.TaskImpl.performTask()` at launch
+Runs `TaskImpl.performTask()` at launch
 
 ### Creating Containers
 

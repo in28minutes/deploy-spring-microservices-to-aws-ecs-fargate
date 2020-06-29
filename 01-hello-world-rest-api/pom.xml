@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.in28minutes.rest.webservices</groupId>
+	<groupId>com.gspear.rest.webservices</groupId>
 	<artifactId>01-aws-hello-world-rest-api</artifactId>
 	<version>1.0.0-RELEASE</version>
 	<packaging>jar</packaging>
@@ -84,7 +84,7 @@
 					</execution>
 				</executions>
 				<configuration>
-					<repository>in28min/${project.name}</repository>
+					<repository>gspear/${project.name}</repository>
 					<tag>${project.version}</tag>
 					<skipDockerInfo>true</skipDockerInfo>
 				</configuration>
