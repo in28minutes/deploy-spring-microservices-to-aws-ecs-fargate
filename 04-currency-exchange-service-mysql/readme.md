@@ -1,6 +1,6 @@
 # Currency Exchange Micro Service - Mysql
 
-Run com.in28minutes.microservices.currencyconversionservice.CurrencyConversionServiceApplicationMySql as a Java Application.
+Run com.gspearutes.microservices.currencyconversionservice.CurrencyConversionServiceApplicationMySql as a Java Application.
 
 Application uses h2 database to run the tests.
 
@@ -75,7 +75,7 @@ docker run --detach --env MYSQL_ROOT_PASSWORD=dummypassword --env MYSQL_USER=exc
 
 
 ```
-Rangas-MacBook-Air:aws-projects in28min$ mysqlsh
+Rangas-MacBook-Air:aws-projects gspear$ mysqlsh
 MySQL Shell 8.0.15
 Copyright (c) 2016, 2019, Oracle and/or its affiliates. All rights reserved.
 Oracle is a registered trademark of Oracle Corporation and/or its affiliates.
@@ -103,7 +103,7 @@ Fetching table and column names from `todos` for auto-completion... Press ^C to 
 +----+--------------+---------+----------------------------+-------------+
 | id | description  | is_done | target_date                | user        |
 +----+--------------+---------+----------------------------+-------------+
-|  1 | Default Desc | 0       | 2019-06-26 18:30:00.000000 | in28minutes |
+|  1 | Default Desc | 0       | 2019-06-26 18:30:00.000000 | gspearutes |
 +----+--------------+---------+----------------------------+-------------+
 1 row in set (0.0032 sec)
 
@@ -121,7 +121,7 @@ Fetching table and column names from `todos` for auto-completion... Press ^C to 
 ### Creating Containers
 
 - mvn package
-- docker run --publish 8000:8000 --network MY_BRIDGE --name currency-exchange-microservice in28min/aws-currency-exchange-service-mysql:0.0.1-SNAPSHOT
+- docker run --publish 8000:8000 --network MY_BRIDGE --name currency-exchange-microservice gspear/aws-currency-exchange-service-mysql:0.0.1-SNAPSHOT
 
 Test API 
 - http://localhost:8000/api/currency-exchange-microservice/currency-exchange/from/USD/to/INR
